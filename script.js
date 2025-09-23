@@ -19,12 +19,13 @@ $('p').each(function() {
 })
 
 // 3
-var classesArray = $('#test').parents()
+$('#test').wrap('<div class="some-class">')
+var classesArray = $('#test').parents().not('body').not('html')
     .map(function() {
         return $(this).attr('class') || '';
     }).get();
 
-    console.log(classesArray);
+console.log(classesArray);
 
 // 4
 $('p').each(function() {
