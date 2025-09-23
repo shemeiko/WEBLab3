@@ -4,9 +4,9 @@ let $parentSibling = $parent.siblings().not('div').not('span')
 $parentSibling.wrapAll('<div class="www">')
 
 // 1
-let $test = $('#test').css('color', 'green')
-let $elWithWWW = $test.next('.www')
-$test.insertAfter($elWithWWW)
+let $stest = $('span#test').css('color', 'green')
+let $elWithWWW = $stest.next('.www')
+$stest.insertAfter($elWithWWW)
 
 // 2
 $('p').each(function() {
@@ -43,16 +43,16 @@ $('li').slice(-4, -1)
     })
 
 // 6
-var ol = $('#test');
+var ol = $('ol#test');
 var reversedItems = ol.children('li').get().reverse();
 ol.empty().append(reversedItems);
 
 // 7
-var elem = $('#text');
-var nextSinblings = elem.prevAll().get().reverse();
-var prevSiblings = elem.nextAll().get();
-elem.before(nextSinblings);
-elem.after(prevSiblings);
+let $oltest = $('ol#test');
+let nextSinblings = $oltest.nextAll().get();
+let prevSiblings = $oltest.prevAll().get().reverse();
+$oltest.before(nextSinblings);
+$oltest.after(prevSiblings);
 
 // 8
 $('li').each(function() {
