@@ -47,6 +47,11 @@ var reversedItems = ol.children('li').get().reverse();
 ol.empty().append(reversedItems);
 
 // 7
+var elem = $('#text');
+var nextSinblings = elem.prevAll().get().reverse();
+var prevSiblings = elem.nextAll().get();
+elem.before(nextSinblings);
+elem.after(prevSiblings);
 
 // 8
 $('li').each(function() {
