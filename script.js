@@ -42,6 +42,9 @@ $('li').slice(-4, -1)
     })
 
 // 6
+var ol = $('#test');
+var reversedItems = ol.children('li').get().reverse();
+ol.empty().append(reversedItems);
 
 // 7
 
