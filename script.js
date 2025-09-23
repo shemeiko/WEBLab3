@@ -19,7 +19,12 @@ $('p').each(function() {
 })
 
 // 3
-// console.log($('#test'))
+var classesArray = $('#test').parents()
+    .map(function() {
+        return $(this).attr('class') || '';
+    }).get();
+
+    console.log(classesArray);
 
 // 4
 $('p').each(function() {
