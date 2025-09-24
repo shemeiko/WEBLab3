@@ -20,12 +20,12 @@ $('p').each(function() {
 
 // 3
 $('#test').wrap('<div class="some-class">')
-var classesArray = $('#test').parents().not('body').not('html')
+var $classesArray = $('#test').parents().not('body').not('html')
     .map(function() {
         return $(this).attr('class') || '';
     }).get();
 
-console.log(classesArray);
+console.log($classesArray);
 
 // 4
 $('p').each(function() {
@@ -49,10 +49,10 @@ ol.empty().append(reversedItems);
 
 // 7
 let $oltest = $('ol#test');
-let nextSinblings = $oltest.nextAll().get();
-let prevSiblings = $oltest.prevAll().get().reverse();
-$oltest.before(nextSinblings);
-$oltest.after(prevSiblings);
+let $nextSinblings = $oltest.nextAll().get();
+let $prevSiblings = $oltest.prevAll().get().reverse();
+$oltest.before($nextSinblings);
+$oltest.after($prevSiblings);
 
 // 8
 $('li').each(function() {
